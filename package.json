@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "webpack -w",
+    "build": "webpack -p"
+  },
+  "author": "Peter Piekarczyk <peterpiekarczyk@gmail.com> (http://peterp.me)",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "babel-runtime": "^5.8.20",
+    "css-loader": "^0.17.0",
+    "node-sass": "^3.3.2",
+    "react": "^0.13.3",
+    "sass-loader": "^2.0.1",
+    "webpack": "^1.12.1"
+  }
+}

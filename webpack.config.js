@@ -17,15 +17,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test: /\.js?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel?optional[]=runtime&stage=0'
-      },
-      {
-        test: /\.scss$/,
-        loader: 'style!css!sass'
-      }
+      { test: /\.jsx?$/, exclude: /(node_modules|bower_components)/, loader: 'babel?optional[]=runtime&stage=0' },
+      { test: /\.scss$/, loader: 'style!css!sass' }
     ]
   }
 };

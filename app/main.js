@@ -1,4 +1,7 @@
 import Hello from './two'
+import Input from './components/base/input'
+
+import "../styles/app.scss"
 
 const hi = React.createClass({
   getInitialState() {
@@ -9,8 +12,12 @@ const hi = React.createClass({
 
   render() {
     return (
-      <span>Hi</span>
-      )
+      <div className="Modal">
+        <div className="Modal-overlay"></div>
+        <div className="Modal-inner">
+        </div>
+      </div>
+    )
   }
 
 })

@@ -1,25 +1,32 @@
-import Hello from './two'
-import Input from './components/base/input'
+import React from 'react'
 
-import "../styles/app.scss"
+const SampleComponent = React.createClass({
 
-const hi = React.createClass({
   getInitialState() {
     return {
-      hi: 'hello'
+      count: 0
     }
+  },
+
+  handleClick(evt) {
+    evt.preventDefault()
+    this.setState({
+      count: this.state.count + 1
+    }, () => console.log('clicked state', this.state))
   },
 
   render() {
     return (
-      <div className="Modal">
-        <div className="Modal-overlay"></div>
-        <div className="Modal-inner">
-        </div>
-      </div>
+      <button
+        type="button"
+        onClick={this.handleClick}>
+        Clicked {this.state.count} times
+      </button>
     )
   }
 
 })
 
-export default hi
+export default SampleComponent
+
+React.render(<SampleComponent />, document.getElementById('react-root'))
